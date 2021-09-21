@@ -24,6 +24,6 @@ STREAMER_NAME = StreamerNameFromTwitch
 }
 ```
 >The values in the listed files need to be changed in order for this program to run
-
+>You may have to install the node modules if you're running this program locally
 
 *This program was made using [Discord.js](https://discord.js.org/#/) and [Twurple.js](https://twurple.js.org/).*
