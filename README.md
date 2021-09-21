@@ -6,14 +6,14 @@
 - token.json
 
 ### Content in the listed files:
-.env:
+**.env:**
 ```
 clientId = ClientIdFromTwitch
 clientSecret = ClientSecretFromTwitch
 TOKEN = BotTokenFromDiscord
 CHANNEL_ID = ChannelIdFromDiscord
 ```
-token.json:
+**token.json:**
 ```
 {
 	"accessToken": "0123456789abcdefghijABCDEFGHIJ",
