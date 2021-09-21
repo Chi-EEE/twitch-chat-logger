@@ -24,4 +24,4 @@ CHANNEL_ID = ChannelIdFromDiscord
 ```
 >The values in the listed files need to be changed in order for this program to run
 
-This program was made using [Discord.js](https://discord.js.org/#/) and [Twurple.js](https://twurple.js.org/).
+*This program was made using [Discord.js](https://discord.js.org/#/) and [Twurple.js](https://twurple.js.org/).*
