@@ -15,11 +15,11 @@ const client = new Client({
     ]
 });
 
-const streamerName = 'sodapoppin';
 const NEED_ONLINE = true;
 const REMOVE_DELETED = true; // If you don't want deleted messages then REMOVED_DELETED should be true
 
 const MINUTE = 60000;
+const STREAMER_NAME = process.env.STREAMER_NAME as string;
 
 //Ensure the constants match the type as string before executing main
 const clientId = process.env.clientId as string;
@@ -45,7 +45,7 @@ async function main() {
 
     streamOn();
     async function streamOn() {
-        const stream = await apiClient.streams.getStreamByUserName(streamerName) || !NEED_ONLINE; // If Channel is live then channel won't be null
+        const stream = await apiClient.streams.getStreamByUserName(STREAMER_NAME) || !NEED_ONLINE; // If Channel is live then channel won't be null
 
         if (stream) {
             var messages = new Map<string, string>();
@@ -55,7 +55,7 @@ async function main() {
                 const date = new Date();
                 console.log(`${stream.userName} went live within a 1 minute window at ${date.toUTCString()}!`);
             }
-            const chatClient = new ChatClient({ authProvider, channels: [streamerName] });
+            const chatClient = new ChatClient({ authProvider, channels: [STREAMER_NAME] });
             await chatClient.connect();
 
             // Whenever someone chats in twitch channel, their message is put into a Map
@@ -86,7 +86,7 @@ async function main() {
                 (DS_CHANNEL as TextChannel).send({
                     files: [{
                         attachment: './chat.txt',
-                        name: `${streamerName} - ${date.toUTCString()}`
+                        name: `${STREAMER_NAME} - ${date.toUTCString()}`
                       }]
                 });
                 await fs.unlink('chat.txt');
@@ -95,7 +95,7 @@ async function main() {
             // Loop to check if the streamer is online
             async function loop() {
                 getChat();
-                const stream = await apiClient.streams.getStreamByUserName(streamerName) || !NEED_ONLINE;
+                const stream = await apiClient.streams.getStreamByUserName(STREAMER_NAME) || !NEED_ONLINE;
                 if (stream) {
                     setTimeout(loop, MINUTE);
                 }
