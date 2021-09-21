@@ -1,24 +1,3 @@
-/*
-.env:
-clientId = aaaaaaaaaaaaaaa
-clientSecret = asdfghjklasdfghjk
-TOKEN = dfsahjdfash.sdfgjuf.dsdas
-CHANNEL_ID = 12345678901234
-*/
-
-/*
-tokens.json:
-{
-    "accessToken": "hnj5iyt6r345dfsjio345342dfg",
-    "refreshToken": "4jio2k3ln4lhjnik3er5wnr34io2nniodfskl",
-    "scope": [
-        "chat:edit",
-        "chat:read"
-    ],
-    "expiresIn": 12356,
-    "obtainmentTimestamp": 213890345812
-}
- */
 require('dotenv').config()
 //Twurple
 import { ApiClient, HelixStream } from '@twurple/api';
