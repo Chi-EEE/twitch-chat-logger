@@ -1,6 +1,6 @@
 # twitch-chat-logger
 ## Usage
-This program can run using the free dyno inside of [Heroku](https://dashboard.heroku.com/).
+This program can be ran using the free dyno inside of [Heroku](https://dashboard.heroku.com/).
 ### Files needed to be created:
 - .env
 - token.json
