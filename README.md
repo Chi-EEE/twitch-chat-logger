@@ -1,4 +1,5 @@
 # twitch-chat-logger
+Program which uses Discord.js and Twurple.js to log and upload chat logs to a discord channel.
 ## Usage
 This program can be ran using the free dyno inside of [Heroku](https://dashboard.heroku.com/).
 ### Files needed to be created:
